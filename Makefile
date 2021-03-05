@@ -2,7 +2,7 @@ NAME = minishell
 
 all: ${NAME}
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -fsanitize=address
 
 CC = gcc
 
@@ -15,7 +15,7 @@ SRCS_PATH = srcs/
 
 OBJS_PATH = objs/
 
-SRCS_NAME = main.c get_next_line.c get_next_line_utils.c \
+SRCS_NAME = main.c get_next_line.c get_next_line_utils.c ft_pwd.c ft_env.c ft_cd.c\
 
 OBJS_NAME = $(SRCS_NAME:.c=.o)
 

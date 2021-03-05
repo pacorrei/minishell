@@ -16,6 +16,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 int		verif_tab(char *str);
 int		verfi_char(char c);

@@ -69,15 +69,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (new);
 	}
 	i = 0;
-	if (!(new = malloc(sizeof(char) * len + 1)))
+	if (!(new = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (i < len)
+	new[len] = '\0';
+	while (i < len && new[i] != '\0' && s[start] != '\0')
 	{
 		new[i] = s[start];
 		i++;
 		start++;
 	}
-	new[i] = '\0';
 	return (new);
 }
 
